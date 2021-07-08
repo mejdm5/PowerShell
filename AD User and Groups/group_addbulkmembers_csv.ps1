@@ -2,7 +2,7 @@
 ## This foreach loop will add the users on your csv to the group specified in the targetgroup variable. 
 
 
-$users = Import-Csv "C:\exchscripts\license_samaccountnames.csv"
+$users = Import-Csv "C:\Path\to\csv.csv"
 
 $targetgroup = "Name of Group here"
 
