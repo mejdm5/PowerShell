@@ -4,12 +4,15 @@
 
 $users = Import-Csv "C:\Path\to\csv.csv"
 
-$targetgroup = "Name of Group here"
+$targetgroup1 = "Name of Group here"
+$targetgroup2 = "Name of Group here"
 
 
 Foreach ($user in $users)
 {
-    Add-ADGroupMember -Identity $targetgroup -Members $user.samaccountname -Confirm:$false
+    Add-ADGroupMember -Identity $targetgroup1 -Members $user.samaccountname -Confirm:$false
+    Add-ADGroupMember -Identity $targetgroup2 -Members $user.samaccountname -Confirm:$false
+
 
 }
 
